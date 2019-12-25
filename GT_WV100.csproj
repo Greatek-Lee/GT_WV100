@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1C41F97-E3EC-4FBB-97E3-19CEF6D500CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GT_WV100</RootNamespace>
+    <AssemblyName>GT_WV100</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.BDaqOcxLib">
+      <HintPath>.\Interop.BDaqOcxLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Draw.cs" />
+    <Compile Include="File.cs" />
+    <Compile Include="MF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MF.designer.cs">
+      <DependentUpon>MF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="password.designer.cs">
+      <DependentUpon>password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCI_8164.cs" />
+    <Compile Include="PLC.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectManage.designer.cs">
+      <DependentUpon>ProjectManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WARNING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WARNING.Designer.cs">
+      <DependentUpon>WARNING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="單動操作.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="單動操作.Designer.cs">
+      <DependentUpon>單動操作.cs</DependentUpon>
+    </Compile>
+    <Compile Include="資料分析.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="資料分析.Designer.cs">
+      <DependentUpon>資料分析.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MF.resx">
+      <DependentUpon>MF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="password.resx">
+      <DependentUpon>password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectManage.resx">
+      <DependentUpon>ProjectManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WARNING.resx">
+      <DependentUpon>WARNING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="單動操作.resx">
+      <DependentUpon>單動操作.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="資料分析.resx">
+      <DependentUpon>資料分析.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxAltairDrv">
+      <Guid>{126ED020-54FA-4FC7-9C3D-DFF8D206EACF}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAltairUDrv">
+      <Guid>{5F226CCF-9210-48E1-904D-12C56D9785A3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAltairUVisionFrameworkCtrl">
+      <Guid>{24FED4C0-F418-40AF-A172-337C4E068A20}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAxAltairDrv">
+      <Guid>{126ED020-54FA-4FC7-9C3D-DFF8D206EACF}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAxAltairUDrv">
+      <Guid>{5F226CCF-9210-48E1-904D-12C56D9785A3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAxAltairUVisionFrameworkCtrl">
+      <Guid>{24FED4C0-F418-40AF-A172-337C4E068A20}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAxOvkBarcodeTools">
+      <Guid>{EEFC9417-D968-42FF-BA65-10D50EC0D0A0}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAxOvkBase">
+      <Guid>{DB0BBF88-94E3-4ACC-AE21-160BFB4FAFAA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAxOvkBlob">
+      <Guid>{82DC3E51-8058-4A58-A2F1-D984A8B8D570}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAxOvkGeometry">
+      <Guid>{BBAA9195-418F-4DBD-AA89-E213758F6A74}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAxOvkImage">
+      <Guid>{5635B648-0A7D-4FF1-8CFA-D6446B91384F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAxOvkPat">
+      <Guid>{7ABEF294-9249-4234-ADB4-2E730AAE8627}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxOvkBarcodeTools">
+      <Guid>{EEFC9417-D968-42FF-BA65-10D50EC0D0A0}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxOvkBase">
+      <Guid>{DB0BBF88-94E3-4ACC-AE21-160BFB4FAFAA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxOvkBlob">
+      <Guid>{82DC3E51-8058-4A58-A2F1-D984A8B8D570}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxOvkGeometry">
+      <Guid>{BBAA9195-418F-4DBD-AA89-E213758F6A74}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxOvkImage">
+      <Guid>{5635B648-0A7D-4FF1-8CFA-D6446B91384F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxOvkPat">
+      <Guid>{7ABEF294-9249-4234-ADB4-2E730AAE8627}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1413123333.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1413881313_camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1413881313_camera1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1413881313_camera2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1414322684_civil_engineer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1414323075_Synchronize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1414324523_Log Out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1414325236_lock-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14131233331.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-page-zoom-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-page-zoom-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g4278.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g4385.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g4462.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g44621.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_object_rotate_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_object_rotate_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram10 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object_rotate_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user84.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer-gold-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer-gold-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafer-gold-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowDDDDDDD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowCCCCC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowDD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowD2323D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowDDD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow23323DD.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

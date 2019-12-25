@@ -1,0 +1,61 @@
+//
+        //switch (ST.Req_STATE)
+        //{
+        //    case (0)://要求停止
+        //        switch (ST.CurrentSTATE.State_IDX)
+        //        {
+        //            case (1)://自動狀態下 停止
+        //                MV_停止所有軸();
+        //                timer_Step.Enabled = false;//停止步序掃描timer
+        //                timer_Alarm_Thread.Change(-1, 100);//停止異常偵測timer
+        //                ST.CurrentSTATE.State_IDX = 0;
+        //                break;
+        //            case (2)://復歸狀態下 停止
+        //                MV_停止所有軸();
+        //                timer_Step.Enabled = false;//停止步序掃描timer
+        //                timer_Alarm_Thread.Change(-1, 100);//停止異常偵測timer
+        //                ST.CurrentSTATE.State_IDX = 0;
+        //                break;
+        //            default:
+        //                break;
+        //        }
+        //        break;
+        //    case (1)://要求自動
+        //        switch (ST.CurrentSTATE.State_IDX)
+        //        {
+        //            case (0)://自動狀態下 停止
+        //                MV_停止所有軸();
+        //                timer_Step.Enabled = false;//停止步序掃描timer
+        //                timer_Alarm_Thread.Change(-1, 100);//停止異常偵測timer
+        //                ST.CurrentSTATE.State_IDX = 0;
+        //                break;
+        //            case (2)://復歸狀態下 停止
+        //                MV_停止所有軸();
+        //                timer_Step.Enabled = false;//停止步序掃描timer
+        //                timer_Alarm_Thread.Change(-1, 100);//停止異常偵測timer
+        //                ST.CurrentSTATE.State_IDX = 0;
+        //                break;
+        //            default:
+        //                break;
+        //        }
+        //        break;
+        //    case (2):
+        //        break;
+        //    case (3):
+        //        break;
+        //    case (4):
+        //        break;
+        //    case (5):
+        //        break;
+        //    case (6):
+        //        break;
+        //    case (7):
+        //        break;
+        //    case (8):
+        //        break;
+        //    case (9):
+        //        break;
+
+        //    default:
+        //        break;
+        //}
